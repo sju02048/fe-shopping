@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@import "reset", "mixin", "variable";
+
+$color: #ff000f;
+
+h1 {
+  color: $color;
+}
+p {
+  color: $color;
+}
