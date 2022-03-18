@@ -1,16 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
-  :after,
-:before {
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-*,
-
 }
 
 html,
@@ -29,10 +24,12 @@ svg {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul,
-ol {
+ol,
+li {
   list-style: none;
 }
 
@@ -45,4 +42,16 @@ button {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  cursor: pointer;
+}
+
+section,
+footer {
+  width: 1020px;
+  margin: 0 auto;
 }

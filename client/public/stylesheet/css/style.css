@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+.show {
+  visibility: visible !important;
+}
+.show-animation {
+  max-height: 100% !important;
+  transition: all 0.2s ease-in-out;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font: inherit;
   color: inherit;
-}
-
-*,
-:after,
-:before {
-  box-sizing: border-box;
-  flex-shrink: 0;
 }
 
 html,
@@ -29,10 +31,12 @@ svg {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul,
-ol {
+ol,
+li {
   list-style: none;
 }
 
@@ -47,10 +51,298 @@ button {
   cursor: pointer;
 }
 
-h1 {
-  color: #ff000f;
+h1,
+h2,
+h3 {
+  cursor: pointer;
 }
 
-p {
-  color: #ff000f;
+section,
+footer {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 32px;
+  font-size: 11px;
+}
+.top-bar li {
+  padding: 8px 0 0 12px;
+}
+.top-bar--line {
+  position: absolute;
+  height: inherit;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f0;
+}
+.top-bar--left {
+  display: flex;
+}
+.top-bar--right {
+  display: flex;
+  padding-right: 25px;
+}
+
+.top-nav {
+  display: flex;
+}
+
+.category-btn {
+  min-width: 110px;
+  min-height: 115px;
+  background-image: url("//static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+  text-align: center;
+}
+.category-btn > a {
+  color: #fff;
+  font-size: 13px;
+  margin-top: 70px;
+  display: inline-block;
+}
+
+.category-layer {
+  visibility: hidden;
+  position: absolute;
+  min-height: 100px;
+  top: 147px;
+  border: 1px solid #f0f0f0;
+  box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  background: #fff;
+  text-align: left;
+  overflow: hidden;
+}
+.category-layer li {
+  height: 29px;
+  padding-left: 20px;
+}
+.category-layer li a {
+  display: inline-block;
+  height: 20px;
+  width: 140px;
+  color: #555;
+  font-size: 14px;
+  text-align: left;
+}
+.category-layer li a:hover {
+  display: inline;
+  color: #4285f4;
+  border-bottom: 1px solid #4285f4;
+}
+
+.top-main {
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+  height: 91px;
+  padding-top: 16px;
+  font-size: 12px;
+}
+.top-main-mid {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.top-main-mid h1 {
+  min-width: 174px;
+  min-height: 41px;
+  background-image: url("//image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.top-main-mid .my-coupang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-main-mid .my-coupang .icon {
+  min-width: 29px;
+  min-height: 34px;
+  background-image: url("//static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png");
+  background-repeat: no-repeat;
+  background-position: -112px -42px;
+  background-size: auto;
+}
+.top-main-mid .cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top-main-mid .cart .icon {
+  min-width: 40px;
+  min-height: 41px;
+  background-image: url("//static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png");
+  background-repeat: no-repeat;
+  background-position: -112px 0;
+  background-size: auto;
+}
+.top-main-bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+.top-main-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 80px;
+}
+.top-main-bottom li {
+  padding: 7px 14px 0;
+  height: 32px;
+  text-align: center;
+  font-weight: 300;
+}
+.top-main-bottom li a:hover {
+  display: inline;
+  color: #4285f4;
+  border-bottom: 1px solid #4285f4;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 520px;
+  height: 37px;
+  border: 2px solid #4285f4;
+  overflow: hidden;
+}
+
+.search-select {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #f0f0f0;
+}
+.search-select-category {
+  padding-left: 10px;
+  color: #555;
+  width: 110px;
+}
+.search-select--toggle-btn {
+  min-width: 30px;
+  min-height: 30px;
+  background-image: url("//static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png");
+  background-repeat: no-repeat;
+  background-position: 6px -165px;
+  background-size: auto;
+}
+
+.search-keyword {
+  width: 310px;
+  border: 0;
+  margin-left: 10px;
+}
+
+.search-mic-icon {
+  min-width: 26px;
+  min-height: 26px;
+  background-image: url("//img1a.coupangcdn.com/image/coupang/common/ic_mic.png");
+  background-repeat: no-repeat;
+  background-position: 3px 1px;
+  background-size: 20px 48px;
+}
+
+.search-read-icon {
+  min-width: 50px;
+  min-height: 35px;
+  background-image: url("//static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png");
+  background-repeat: no-repeat;
+  background-position: -112px -71px;
+  background-size: auto;
+}
+
+.search-category-layer {
+  position: absolute;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.2s ease-in-out;
+  top: 104px;
+  border: 1px solid #f0f0f0;
+  box-shadow: -1px 4px 5px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  background: #fff;
+  text-align: left;
+  overflow: hidden;
+}
+.search-category-layer li {
+  height: 29px;
+  padding-left: 20px;
+}
+.search-category-layer li a {
+  display: inline-block;
+  height: 20px;
+  width: 120px;
+  color: #555;
+  font-size: 14px;
+  text-align: left;
+}
+.search-category-layer li a:hover {
+  display: inline;
+  color: #4285f4;
+  border-bottom: 1px solid #4285f4;
+}
+
+.main-banner {
+  height: 450px;
+}
+.main-banner--img {
+  min-width: 100%;
+  min-height: 100%;
+  background-image: url("https://dummyimage.com/1020x450/e6dd8f/ffffff.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto;
+}
+
+.today-discovery {
+  margin-top: 40px;
+}
+
+.today-discovery-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.today-discovery-container--title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+.today-discovery-container--subtitle {
+  font-size: 14px;
+}
+
+.today-discovery-grid-container {
+  width: 980px;
+  height: 950px;
+  display: grid;
+  gap: 10px;
+  border: 1px solid #555;
+  padding: 10px;
+}
+.today-discovery-grid-container .item {
+  border: 1px solid #555;
+}
+.today-discovery-grid-container .item:nth-child(1) {
+  grid-column: 1/span 2;
+}
+.today-discovery-grid-container .item:nth-child(2) {
+  grid-column: 3/span 2;
+}
+.today-discovery-grid-container .item:nth-child(7) {
+  grid-column: 1/span 2;
+  grid-row: 3/span 1;
 }/*# sourceMappingURL=style.css.map */

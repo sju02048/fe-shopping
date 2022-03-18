@@ -1,37 +1,97 @@
 doctype html
 html(lang="ko")
-  link(rel="shortcut icon" 
-  href="https://image9.coupangcdn.com/image/coupang/favicon/v2/favicon.ico" 
-  type="image/x-icon")
-
-  link(rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap")
-
-  link(rel="stylesheet"
-  href="stylesheet/css/style.css")
-
   head
+    link(rel="shortcut icon",
+    href="https://image9.coupangcdn.com/image/coupang/favicon/v2/favicon.ico", 
+    type="image/x-icon")
+    link(rel="stylesheet",
+    href="stylesheet/css/style.css")
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title 쿠팡! 클론
 
   body 
-    aside.top-bar
-
     header
-      .category-btn
-      section
-        h1 coupang img
+      section.top-bar
+        .top-bar--line
+        .top-bar--left
+          li
+            a 즐겨찾기
+          li  
+            a 입점신청
+        .top-bar--right
+          li
+            a 로그인
+          li
+            a 회원가입
+          li
+            a 고객센터
+
+      section.top-nav
+        .category-btn
+          a 카테고리
+          .category-layer
+            ul
+              -var category = ["패션의류/잡화", "뷰티", "식품", "주방용품", "생활용품","스포츠/레저","자동차용품" ,"문구/오피스", "반려동물용품", "헬스/건강식품", "여행/티켓", "테마관"]
+              each index in category 
+                li
+                  a= index
+
+        .top-main 
+          .top-main-mid
+            h1
+            .search-bar
+              a.search-select
+                .search-select-category 전체
+                .search-select--toggle-btn
+              .search-category-layer
+                ul
+                  -var searchCategory = ["전체", "패션의류/잡화", "뷰티", "식품", "주방용품", "생활용품","스포츠/레저","자동차용품" ,"문구/오피스", "반려동물용품", "헬스/건강식품", "여행/티켓", "테마관", "식품", "주방용품", "생활용품","스포츠/레저","자동차용품" ,"문구/오피스", "반려동물용품", "헬스/건강식품", "여행/티켓", "테마관"]
+                  each index in searchCategory 
+                    li
+                      a= index
+
+              input.search-keyword(placeholder="찾고 싶은 상품을 검색해보세요!")
+              .search-keyword-container
+              a.search-mic-icon
+              a.search-read-icon
+
+
+            a.my-coupang 
+              .icon 
+              span.title 마이쿠팡
+            a.cart
+              .icon
+              span.title 장바구니
+
+          .top-main-bottom
+            ul
+              -var coupangCategory = ["로켓배송", "로켓배송", "쿠팡비즈", "로켓직구", "골드박스", "와우회원할인","이벤트/쿠폰","기획전" ,"여행/티켓"]
+              each index in coupangCategory 
+                li
+                  a= index
+
+
 
     aside.ads-list
 
     section.main-banner
+      .main-banner--img
 
     section.today-discovery
+      .today-discovery-container
+        h2.today-discovery-container--title 오늘의 발견
+        .today-discovery-container--subtitle | 오늘 쿠팡이 엄선한 가장 HOT한 상품!
+
+      .today-discovery-grid-container
+        -for (var x = 0; x < 9; x++)
+          .item
+
+
 
     section.carousel-list
 
     footer 
 
-    script(type="module" src="index.js") 
+    script(type="module" src="javascript/index.js") 

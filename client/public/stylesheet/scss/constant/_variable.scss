@@ -1,0 +1,18 @@
+$black: #333;
+$black-down: #555;
+$gray: #f0f0f0;
+$white: #fff;
+$blue: #4285f4;
+
+$coupang-logo: "//image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png";
+$header-images: "//static.coupangcdn.com/image/coupang/common/pc_header_img_sprite_180104.png";
+$mic-images: "//img1a.coupangcdn.com/image/coupang/common/ic_mic.png";
+
+.show {
+  visibility: visible !important;
+
+  &-animation {
+    max-height: 100% !important;
+    transition: all 0.2s ease-in-out;
+  }
+}

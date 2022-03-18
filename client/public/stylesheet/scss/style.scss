@@ -1,11 +1,13 @@
 @charset "UTF-8";
-@import "reset", "mixin", "variable";
 
-$color: #ff000f;
+@import "./constant/variable";
 
-h1 {
-  color: $color;
-}
-p {
-  color: $color;
-}
+@import "./global/reset";
+@import "./global/font";
+
+@import "./mixin/mixin";
+
+@import "./component/header";
+@import "./component/search-bar";
+@import "./component/main-banner";
+@import "./component/today-discovery";

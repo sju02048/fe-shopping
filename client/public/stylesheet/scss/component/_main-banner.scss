@@ -1,0 +1,7 @@
+.main-banner {
+  height: 450px;
+
+  &--img {
+    @include image();
+  }
+}
