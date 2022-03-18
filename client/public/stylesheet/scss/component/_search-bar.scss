@@ -1,0 +1,46 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 520px;
+  height: 37px;
+  border: 2px solid $blue;
+  overflow: hidden;
+}
+
+.search-select {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid $gray;
+
+  &-category {
+    padding-left: 10px;
+    color: $black-down;
+    width: 110px;
+  }
+
+  &--toggle-btn {
+    @include image($header-images, 30px, 30px, 6px -165px);
+  }
+}
+
+.search-keyword {
+  width: 310px;
+  border: 0;
+  margin-left: 10px;
+}
+
+.search-mic-icon {
+  @include image($mic-images, 26px, 26px, 3px 1px, 20px 48px);
+}
+.search-read-icon {
+  @include image($header-images, 50px, 35px, -112px -71px);
+}
+
+.search-category-layer {
+  position: absolute;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.2s ease-in-out;
+  top: 104px;
+  @include category-layer(120px);
+}

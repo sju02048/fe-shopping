@@ -1,5 +1,6 @@
 import express from "express";
-import router from "./router/index.js";
+import router from "./routes/index.js";
+import cors from "cors";
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -12,6 +13,7 @@ app.listen(PORT, () => {
 app.set("view engine", "pug");
 app.set("views", "./views");
 app.use(express.static("../client/public"));
+app.use(cors());
 app.use(router);
 
 app.use(errorHandler);
