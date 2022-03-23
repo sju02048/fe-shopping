@@ -1,21 +1,14 @@
-import { $, delay } from "./util/util.js";
+import { LayerController } from "./controller/LayerController.js";
+import { SearchController } from "./controller/SearchController.js";
+import LocalStorage from "./util/localstorage.js";
+import { LayerView } from "./view/LayerView.js";
+import { SearchView } from "./view/SearchView.js";
 
-let layerFlag = true;
-const $categoryBtn = $(".category-btn");
-$categoryBtn.addEventListener("mouseenter", ({ target }) => {
-  delay(200);
-  if (layerFlag) {
-    $(".category-layer", target).classList.add("show");
-  }
-  layerFlag = false;
-});
+const apps = [
+  new LayerController(new LayerView()),
+  new SearchController(new SearchView()),
+];
 
-$categoryBtn.addEventListener("mouseleave", ({ target }) => {
-  $(".category-layer", target).classList.remove("show");
-});
-
-const $searchSelect = $(".search-select");
-$searchSelect.addEventListener("click", ({ currentTarget }) => {
-  const $layer = $(".search-category-layer", currentTarget.parent);
-  $layer.classList.toggle("show-animation");
-});
+for (const app of apps) {
+  app.init();
+}
