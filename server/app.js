@@ -6,8 +6,8 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 app.locals.pretty = true;
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+app.listen(PORT, (err) => {
+  err ? console.log(`err: ${err}`) : console.log(`Listening on port ${PORT}`);
 });
 
 app.set("view engine", "pug");

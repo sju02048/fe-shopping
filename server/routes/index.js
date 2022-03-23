@@ -1,14 +1,16 @@
 import express from "express";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const categoryList = require("../data/category-list.json");
 
-// import movie from './movie/index'
-// import logout from './logout/index'
-// router.use('/movie', movie)
-// router.use('/logout', logout)
+import search from "./search/index.js";
 
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", categoryList);
 });
+
+router.use("/search", search);
 
 export default router;
