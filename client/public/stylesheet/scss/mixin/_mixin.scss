@@ -17,31 +17,34 @@
 
 @mixin hover-color($font-color: $black-down, $border-bottom-color: $black-down) {
   &:hover {
-    display: inline;
     color: $font-color;
-    border-bottom: 1px solid $border-bottom-color;
+    text-decoration: underline;
+    text-decoration-color: $border-bottom-color;
   }
 }
 
 @mixin category-layer($width: 200px) {
   border: 1px solid $gray;
-  box-shadow: -1px 4px 5px rgb(0 0 0 / 30%);
-  z-index: 2;
   background: $white;
   text-align: left;
-  overflow: hidden;
 
   li {
+    padding-left: 10px;
     height: 29px;
-    padding-left: 20px;
+
+    &:first-child {
+      margin-top: 10px;
+    }
 
     a {
       display: inline-block;
-      height: 20px;
       width: $width;
       color: $black-down;
       font-size: 14px;
-      text-align: left;
+
+      strong {
+        color: $blue;
+      }
 
       @include hover-color($blue, $blue);
     }

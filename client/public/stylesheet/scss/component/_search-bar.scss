@@ -24,9 +24,10 @@
 }
 
 .search-keyword {
-  width: 310px;
+  width: 290px;
   border: 0;
   margin-left: 10px;
+  padding-right: 0px;
 }
 
 .search-mic-icon {
@@ -37,10 +38,55 @@
 }
 
 .search-category-layer {
+  max-height: 0;
   position: absolute;
   overflow: hidden;
-  max-height: 0;
   transition: all 0.2s ease-in-out;
-  top: 104px;
+  top: 107px;
+  z-index: 1;
   @include category-layer(120px);
+}
+
+.search-keyword-Layer {
+  max-height: 0;
+  position: absolute;
+  overflow: hidden;
+  top: 107px;
+  z-index: 1;
+
+  @include category-layer(330px);
+
+  li {
+    display: flex;
+    span {
+      right: 0;
+      padding-right: 10px;
+      opacity: 0;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &--top {
+    cursor: auto;
+    font-weight: 500;
+    padding: 10px 0 8px 10px;
+    border-bottom: 1px solid $gray;
+  }
+
+  &--bottom {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 100;
+    border-top: 1px solid $gray;
+
+    padding: 5px 0 5px 10px;
+    background-color: $gray;
+    span {
+      cursor: pointer;
+    }
+  }
 }

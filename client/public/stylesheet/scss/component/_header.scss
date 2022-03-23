@@ -42,12 +42,12 @@
 }
 
 .category-layer {
-  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
   position: absolute;
-  min-height: 100px;
-  top: 147px;
+  top: 145px;
 
-  @include category-layer(140px);
+  @include category-layer(135px);
 }
 
 .top-main {
