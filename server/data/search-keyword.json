@@ -1,4 +1,56 @@
 {
+  "ㅇ": [
+    {
+      "keyword": "우유",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "에어팟 프로",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "오뚜기밥",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이폰 13 pro",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "에어팟",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이폰 13",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "유산균",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "오메가3",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "에어팟 3세대",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "플레인 요거트",
+      "requestId": "78eb00a9ff0a42e39c9fadc8958295f6",
+      "travelKeyword": "false"
+    }
+  ],
   "아": [
     {
       "keyword": "아이폰 13 pro",
@@ -48,6 +100,58 @@
     {
       "keyword": "아이맥",
       "requestId": "77059964-79ee-48ae-b5d4-68e90bde10f0",
+      "travelKeyword": "false"
+    }
+  ],
+  "앙": [
+    {
+      "keyword": "아이폰 13 pro",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이패드 에어4",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이폰13 미니",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "앙블랑 물티슈",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이폰 13",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이패드",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이패드 에어",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이폰 se3",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아이패드 프로 3세대 11인치",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
+      "travelKeyword": "false"
+    },
+    {
+      "keyword": "아에르",
+      "requestId": "bcce396ef662426181f8c3ea1956d185",
       "travelKeyword": "false"
     }
   ],
@@ -103,6 +207,7 @@
       "travelKeyword": "false"
     }
   ],
+
   "아이스": [
     {
       "keyword": "아이스크림",
