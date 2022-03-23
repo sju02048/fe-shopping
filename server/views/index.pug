@@ -33,8 +33,7 @@ html(lang="ko")
           a 카테고리
           .category-layer
             ul
-              -var category = ["패션의류/잡화", "뷰티", "식품", "주방용품", "생활용품","스포츠/레저","자동차용품" ,"문구/오피스", "반려동물용품", "헬스/건강식품", "여행/티켓", "테마관"]
-              each index in category 
+              each index in category
                 li
                   a= index
 
@@ -47,16 +46,16 @@ html(lang="ko")
                 .search-select--toggle-btn
               .search-category-layer
                 ul
-                  -var searchCategory = ["전체", "패션의류/잡화", "뷰티", "식품", "주방용품", "생활용품","스포츠/레저","자동차용품" ,"문구/오피스", "반려동물용품", "헬스/건강식품", "여행/티켓", "테마관", "식품", "주방용품", "생활용품","스포츠/레저","자동차용품" ,"문구/오피스", "반려동물용품", "헬스/건강식품", "여행/티켓", "테마관"]
                   each index in searchCategory 
                     li
                       a= index
 
-              input.search-keyword(placeholder="찾고 싶은 상품을 검색해보세요!")
-              .search-keyword-container
+              form.search-form(action="" method="get")
+                input.search-keyword(type="text" placeholder="찾고 싶은 상품을 검색해보세요!")
+                .search-keyword-Layer
+
               a.search-mic-icon
               a.search-read-icon
-
 
             a.my-coupang 
               .icon 
@@ -67,12 +66,9 @@ html(lang="ko")
 
           .top-main-bottom
             ul
-              -var coupangCategory = ["로켓배송", "로켓배송", "쿠팡비즈", "로켓직구", "골드박스", "와우회원할인","이벤트/쿠폰","기획전" ,"여행/티켓"]
               each index in coupangCategory 
                 li
                   a= index
-
-
 
     aside.ads-list
 
@@ -87,8 +83,6 @@ html(lang="ko")
       .today-discovery-grid-container
         -for (var x = 0; x < 9; x++)
           .item
-
-
 
     section.carousel-list
 
